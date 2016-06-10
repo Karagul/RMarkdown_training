@@ -1,0 +1,61 @@
+---
+title: "Data cleaning example"
+author: "Your Name"
+date: "June 6, 2016"
+output: html_document
+---
+
+# Purpose
+
+The purpose of this document is to illustrate cleaning a data set in a reproducible way using RMarkdown. 
+
+```{r libraries, messages = FALSE}
+# Add ",warning = FALSE" to the chunk options to suppress the messages.  
+
+library(dplyr)
+library(lubridate)
+library(nycflights13)
+library(readr)
+```
+
+```{r params}
+
+# This code block can be replaced by using report parameters instead. Add parameters to the YAML frontmatter like this: 
+
+# params:
+#   begin: "2013-02-01"
+
+params <- list()
+params$begin <- "2013-02-01" 
+params$end <- "2013-03-01"
+
+```
+
+# Cleaning Process
+
+We are basing our analysis on the `nycflights13` data set. The data look like this: 
+```{r read_data}
+# flights <- # FILL IN, the data is in flights.csv
+glimpse(flights)
+```
+
+- The initial table had ```r nrow(flights)``` records. 
+- The earliest one was scheduled for ```r min(flights$time_hour)```. 
+- The latest one was scheduled for **FILL THIS IN, SEE BULLET ABOVE**. 
+
+But for our analysis, we're only using flights scheduled between ```r params$begin``` and **FILL THIS IN TOO**. 
+
+```{r clean_data}
+
+cleaned <- flights %>% filter(time_hour >= params$begin,
+							  time_hour < params$end)
+
+```
+
+The cleaned table has **FILL IN** records. The earliest one was scheduled for ```r min(cleaned$time_hour)```, and the latest for ```r max(cleaned$time_hour)```. 
+
+```{r write_data}
+
+cleaned %>% write_csv('flights_CLEANED.csv')
+```
+

@@ -1,0 +1,59 @@
+---
+title: "Data cleaning example"
+author: "Your Name"
+date: "June 61, 2016"
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    code_folding: hide
+params: 
+  begin: "2013-02-15"
+  end: "2013-03-15"
+---
+# Purpose
+
+The purpose of this document is to illustrate cleaning a data set in a reproducible way using RMarkdown. 
+
+
+```{r message = FALSE, warning = FALSE}
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(nycflights13)
+library(readr)
+```
+
+# Cleaning Process
+
+For this analysis, we used only flights scheduled between ```r params$begin``` and ```r params$end```. 
+
+```{r}
+flights <- read_csv('flights.csv')
+```
+
+The initial table had ```r nrow(flights)``` records. The earliest one was scheduled for ```r min(flights$time_hour)```, and the latest for ```r max(flights$time_hour)```. 
+
+
+Here is a quick visualization of your data selection as a portion of total volume over time. Is that what you expected? 
+
+```{r}
+
+flights <- flights %>% mutate(include = time_hour >= params$begin & time_hour < params$end) 
+flights %>% ggplot() + 
+	aes(x = month(time_hour, label = T), fill = include) + 
+	geom_bar()
+
+cleaned <- flights %>% filter(include)
+```
+
+The cleaned table now has ```r nrow(cleaned)``` records. The earliest one was scheduled for ```r min(cleaned$time_hour)```, and the latest for ```r max(cleaned$time_hour)```. 
+
+```{r}
+
+cleaned %>%
+	write_csv('flights_CLEANED.csv')
+
+```
+
