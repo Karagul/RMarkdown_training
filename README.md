@@ -2,6 +2,16 @@
 
 Training materials for a 60 minute session on reproducible analysis and deliverables using R Markdown. Includes slides, exercises, and examples. 
 
+## Downloading Session Files
+
+To obtain these materials, use git if you are comfortable, or do this: 
+
+![](figs/download.png)
+
+Unzip the downloaded directory and save it somewhere where you will find it again easily. 
+
+## Requirements
+
 To follow along with this session and complete the exercises, you'll need: 
 
 - R
