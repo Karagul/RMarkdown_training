@@ -31,7 +31,9 @@ output:
 
 *Literate programming* breaks down the barrier between code and commentary by allowing you to write both at the same time, as part of the same workflow, in the same document.  
 
-## Literate Programming and Reproducibility
+Two things to write about: the **process** by which you obtained your results, or the **significance** of the results themselves. 
+
+## Process and Reproducibility
 
 *Reproducible* analysis is:
 
@@ -39,9 +41,9 @@ output:
 - Well-documented
 - Maximally automated
 
-A carefully-documented literate program is a powerful tool of reproducibility: anyone can use your program to accomplish new tasks, while clearly understanding your work. 
+A carefully-documented literate program is a powerful tool of reproducibility: anyone can use your program to accomplish new tasks, while clearly understanding your work (since your commentary walks them through it). 
 
-## Literate Programming and Reporting
+## Significance and Reporting
 
 Literate programming can also make it easy to construct reports: 
 
@@ -54,7 +56,7 @@ Note: if you do this, you should find other ways (comments, package documentatio
 
 ## Markdown handles 'normal writing'
 
-*"Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)."* - [Jon Gruber](https://daringfireball.net/projects/markdown/), author of Markdown.
+*"Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)."* - [John Gruber](https://daringfireball.net/projects/markdown/), author of Markdown.
 
 That sounds complicated, but **in practice, Markdown is fantastically simple:**
 ![An example of raw Markdown and processed HTML](http://anthonybush.com/images/markdown_extra_geshi/sample_markdown_to_html_conversion.png)
@@ -69,7 +71,19 @@ knitr::include_graphics("https://rstudioblog.files.wordpress.com/2014/06/storms2
 
 R Markdown is incredibly flexible: you can write reports, dashboards, blog posts, and presentations (like this one!) quickly and easily. 
 
+## Pros and Cons of (R)Markdown
 
+Pros: 
+
+- Focus on your content by letting the Markdown --> HTML conversion software handle the formatting. 
+- Obtain high quality documents for very little work. 
+- Write and document in the same place you code. 
+- Share them freely: RMarkdown documents don't store their data.
+
+Cons: 
+
+- Full customization requires HTML and CSS. 
+- Lots of moving parts that could break. Usually they don't: RStudio does a good job managing behind-the-scenes. 
 
 # Components of R Markdown (+ Exercises)
 
@@ -144,7 +158,9 @@ There are three places marked with **BOLD INSTRUCTIONS** for you to practice usi
 
 ## Parameterized Reports Save Time and Errors
 
-Suppose you'd like to run the same report repeatedly for different subgroups: e.g. service locations, geographic regions, customer demographics, etc. Instead of changing all your code, just **parameterize** your document. 
+Suppose you'd like to run the same report repeatedly for different subgroups: e.g. service locations, geographic regions, customer demographics, etc. 
+
+Instead of changing all your code, just **parameterize** your document. 
 
 ## Exercise 4: Parameterizing Reports
 
@@ -174,9 +190,11 @@ In some of the resources I've included at the end of this deck, you can learn th
 - How to work with figures and control how they display
 - ...
 
-For example, [here](ex1_full.html) is a slightly fancier version of the exercise we just completed. Instead of going into these details, let's illustrate how RMarkdown can be used to construct attractive deliverables. The `html_document` type can be used for this, but let's talk about...
+For example, [here](ex1_full.html) is a slightly fancier version of the exercise we just completed. 
 
-# A Dashboard Example
+Instead of going into these details, let's illustrate how RMarkdown can be used to construct attractive deliverables. The `html_document` type can be used for this, but let's talk about...
+
+# Dashboards
 
 ## `flexdashboard`
 
@@ -227,7 +245,9 @@ Open up a new dashboard by going to `File` -> `New File` -> `RMarkdown` -> `From
 
 - RMarkdown [website](http://rmarkdown.rstudio.com/index.html)
 - RMarkdown [cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-- [Flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/)
+- [Documentation](http://rmarkdown.rstudio.com/flexdashboard/) for `flexdashboard`
+- John Gruber's original Markdown [syntax specification](https://daringfireball.net/projects/markdown/syntax)
+- [Dillinger](http://dillinger.io/), a convenient online tool for practicing writing in Markdown (not that you need much practice) 
 
 ## What's going on behind the scenes? 
 
