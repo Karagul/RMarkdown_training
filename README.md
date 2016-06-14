@@ -2,7 +2,23 @@
 
 Training materials for a 60 minute session on reproducible analysis and deliverables using R Markdown. Includes slides, exercises, and examples. 
 
-## Downloading Session Files
+## 1. Update R
+
+Please go to [CRAN](https://cran.r-project.org/) and download the latest version of R. **You need at least version 3.3.0 to follow along with the exercises**. To check if you are running the right version, open up RStudio and look at the first line of the greeter message: it should say `R Version 3.3.0.` 
+
+## 2. Install Packages
+
+```{r}
+pkgs <- c('knitr', 'rmarkdown', 'dplyr', 'ggplot2', 'readr', 
+          'lubridate', 'tidyr', 'nycflights13', 'httpuv', 
+          'jsonlite', 'shiny', 'htmlwidgets')
+install.packages(pkgs)
+install.packages('flexdashboard', type = 'source')
+```
+
+You can install these packages by opening RStudio, copying and pasting the code above into the console, and hitting "Enter".
+
+## 3. Download Session Files
 
 To obtain these materials, use git if you are comfortable, or do this: 
 
@@ -10,20 +26,6 @@ To obtain these materials, use git if you are comfortable, or do this:
 
 Unzip the downloaded directory and save it somewhere where you will find it again easily. 
 
-## Requirements
+## 4. Check Your Setup
 
-To follow along with this session and complete the exercises, you'll need: 
-
-- R
-- RStudio
-- The following set of packages:
-
-```{r}
-pkgs <- c('knitr', 'rmarkdown', 'dplyr', 'ggplot2', 'readr', 'lubridate', 'tidyr', 'nycflights13')
-install.packages(pkgs)
-install.packages('flexdashboard', type = 'source')
-```
-
-You can install these packages by opening RStudio, and copying and pasting the code above into the console, and hitting "Enter".
-
-These materials assume minimal experience in the R language itself. You don't need to be an R expert to follow along, but some R skills (especially visualization) will help you get the most out of them. 
+Open the file `ex1_skeleton.Rmd` in the downloaded directory, and `knit` it by clicking ![](figs/knit.png) in RStudio. RStudio may prompt you to install additional packages; click 'OK'. If the packages install successfully and a document appears without errors, you are good to go. If an error appears telling you that you need to install a package, attempt to install it. If that doesn't resolve the issue, shoot me an email with a screenshot of your error message. 
