@@ -12,16 +12,15 @@ output:
 **Goal:** By the end of this session, you will: 
 
 1. Be familiar with the paradigm of *literate programming*.
-2. Know two uses for literate programming in R: reproducibility and reporting. 
-3. Possess an operational, elementary, R-based toolbox for literate programming.  
-4. Know how and where to learn more. 
+2. Possess an operational, elementary, R-based toolbox for literate programming.  
+3. Know how and where to learn more. 
 
-### Session Outline
+### **Session Outline**: 
 
-1. Two Perspectives on Literate Programming
+1. Literate Programming
 2. R + Markdown = R Markdown
 3. Components of R Markdown (+ Exercises)
-4. An R Markdown Dashboard
+4. First peak at dashboards
 
 # Two Perspectives on Literate Programming
 
@@ -58,7 +57,7 @@ Note: if you do this, you should find other ways (comments, package documentatio
 
 *"Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)."* - [John Gruber](https://daringfireball.net/projects/markdown/), author of Markdown.
 
-That sounds complicated, but **in practice, Markdown is fantastically simple:**
+That sounds complicated, but **in practice, Markdown is fantastically simple:** [Let's try it](http://dillinger.io/). 
 ![An example of raw Markdown and processed HTML](http://anthonybush.com/images/markdown_extra_geshi/sample_markdown_to_html_conversion.png)
 
 ## R Markdown {.flexbox .vcenter}
@@ -190,7 +189,7 @@ In some of the resources I've included at the end of this deck, you can learn th
 - How to work with figures and control how they display
 - ...
 
-For example, [here](ex1_full.html) is a slightly fancier version of the exercise we just completed. 
+For example, [here](ex1_fancier.html) is a slightly fancier version of the exercise we just completed. 
 
 Instead of going into these details, let's illustrate how RMarkdown can be used to construct attractive deliverables. The `html_document` type can be used for this, but let's talk about...
 

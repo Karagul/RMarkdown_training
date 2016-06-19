@@ -51,8 +51,8 @@ p <- barchart_data %>%
 
 
 # feel free to uncomment the code below to make a few visual tweaks
-# p <- p + coord_flip() + 
-# 	theme_minimal() 
+p <- p + coord_flip() +
+	theme_minimal()
 
 p
 
@@ -92,7 +92,7 @@ valueBox(value = paste0(on_time$carrier, ': ', round(on_time$delay,1), ' min lat
 
 ```
 
-### Customer Experience
+### Fun note! 
 
 The first code block creates a summary table in which the Origin column gives the NY airport of departure, the Destination column gives the destination airport, and Number of Departing Flights is exactly what you'd expect. All the operations used there are from `dplyr` and `tidyr`. 
 
@@ -131,11 +131,11 @@ p <- linechart_data %>%
 	
 
 # feel free to uncomment the code below to make a few visual tweaks
-# p <- p + theme_minimal() +
-# 	theme(axis.text.x=element_text(angle=90),
-# 		  legend.title=element_blank()) +
-# 	xlab('') +
-# 	ylab('Average delay (minutes)')
+p <- p + theme_minimal() +
+	theme(axis.text.x=element_text(angle=90),
+		  legend.title=element_blank()) +
+	xlab('') +
+	ylab('Average delay (minutes)')
 	
 p
 
@@ -169,13 +169,13 @@ p <- boxplot_data %>%
 	facet_wrap(~carrier)  
 
 # feel free to uncomment the code below to make a few visual tweaks
-# p <- p + theme_minimal() +
-# 	theme(axis.text.x=element_text(angle=90),
-# 		  legend.title=element_blank()) +
-# 	xlab('') +
-# 	ylab('Distance (km') + 
-# 	aes(fill = month) + 
-# 	scale_fill_discrete(guide = FALSE)
+p <- p + theme_minimal() +
+	theme(axis.text.x=element_text(angle=90),
+		  legend.title=element_blank()) +
+	xlab('') +
+	ylab('Distance (km') +
+	aes(fill = month) +
+	scale_fill_discrete(guide = FALSE)
 	
 p
 	

@@ -1,6 +1,8 @@
 # Two Perspectives on Literate Programming with R Markdown
 
-Training materials for a 60 minute session on reproducible analysis and deliverables using R Markdown. Includes slides, exercises, and examples. 
+Training materials for a ~45 minute session on reproducible analysis and deliverables using R Markdown. Includes slides, exercises, and examples. 
+
+To follow along with the session, please follow the instructions below. 
 
 ## 1. Update R
 

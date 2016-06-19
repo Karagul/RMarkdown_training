@@ -120,7 +120,9 @@
 
 <p><em>Literate programming</em> breaks down the barrier between code and commentary by allowing you to write both at the same time, as part of the same workflow, in the same document.</p>
 
-</article></slide><slide class=''><hgroup><h2>Literate Programming and Reproducibility</h2></hgroup><article  id="literate-programming-and-reproducibility">
+<p>Two things to write about: the <strong>process</strong> by which you obtained your results, or the <strong>significance</strong> of the results themselves.</p>
+
+</article></slide><slide class=''><hgroup><h2>Process and Reproducibility</h2></hgroup><article  id="process-and-reproducibility">
 
 <p><em>Reproducible</em> analysis is:</p>
 
@@ -130,9 +132,9 @@
 <li>Maximally automated</li>
 </ul>
 
-<p>A carefully-documented literate program is a powerful tool of reproducibility: anyone can use your program to accomplish new tasks, while clearly understanding your work.</p>
+<p>A carefully-documented literate program is a powerful tool of reproducibility: anyone can use your program to accomplish new tasks, while clearly understanding your work (since your commentary walks them through it).</p>
 
-</article></slide><slide class=''><hgroup><h2>Literate Programming and Reporting</h2></hgroup><article  id="literate-programming-and-reporting">
+</article></slide><slide class=''><hgroup><h2>Significance and Reporting</h2></hgroup><article  id="significance-and-reporting">
 
 <p>Literate programming can also make it easy to construct reports:</p>
 
@@ -147,7 +149,7 @@
 
 </article></slide><slide class=''><hgroup><h2>Markdown handles &#39;normal writing&#39;</h2></hgroup><article  id="markdown-handles-normal-writing">
 
-<p><em>&quot;Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).&quot;</em> - <a href='https://daringfireball.net/projects/markdown/' title=''>Jon Gruber</a>, author of Markdown.</p>
+<p><em>&quot;Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).&quot;</em> - <a href='https://daringfireball.net/projects/markdown/' title=''>John Gruber</a>, author of Markdown.</p>
 
 <p>That sounds complicated, but <strong>in practice, Markdown is fantastically simple:</strong> <img src='http://anthonybush.com/images/markdown_extra_geshi/sample_markdown_to_html_conversion.png' title=''/></p>
 
@@ -158,6 +160,24 @@
 <p><img src="https://rstudioblog.files.wordpress.com/2014/06/storms2-001.png" width="500" /></p>
 
 <p>R Markdown is incredibly flexible: you can write reports, dashboards, blog posts, and presentations (like this one!) quickly and easily.</p>
+
+</article></slide><slide class=''><hgroup><h2>Pros and Cons of (R)Markdown</h2></hgroup><article  id="pros-and-cons-of-rmarkdown">
+
+<p>Pros:</p>
+
+<ul>
+<li>Focus on your content by letting the Markdown &#8211;&gt; HTML conversion software handle the formatting.</li>
+<li>Obtain high quality documents for very little work.</li>
+<li>Write and document in the same place you code.</li>
+<li>Share them freely: RMarkdown documents don&#39;t store their data.</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>Full customization requires HTML and CSS.</li>
+<li>Lots of moving parts that could break. Usually they don&#39;t: RStudio does a good job managing behind-the-scenes.</li>
+</ul>
 
 </article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Components of R Markdown (+ Exercises)</h2></hgroup><article  id="components-of-r-markdown-exercises">
 
@@ -225,13 +245,15 @@ date: &quot;June 6, 2016&quot;
 
 </article></slide><slide class=''><hgroup><h2>Exercise 3: Inline Code</h2></hgroup><article  id="exercise-3-inline-code">
 
-<p>You can mix inline R code with sentences like this: today is <code>2016-06-10</code>.</p>
+<p>You can mix inline R code with sentences like this: today is <code>2016-06-19</code>.</p>
 
 <p>There are three places marked with <strong>BOLD INSTRUCTIONS</strong> for you to practice using inline R code. It will be easiest to look at the examples that already exist in the code and modify them.</p>
 
 </article></slide><slide class=''><hgroup><h2>Parameterized Reports Save Time and Errors</h2></hgroup><article  id="parameterized-reports-save-time-and-errors">
 
-<p>Suppose you&#39;d like to run the same report repeatedly for different subgroups: e.g. service locations, geographic regions, customer demographics, etc. Instead of changing all your code, just <strong>parameterize</strong> your document.</p>
+<p>Suppose you&#39;d like to run the same report repeatedly for different subgroups: e.g. service locations, geographic regions, customer demographics, etc.</p>
+
+<p>Instead of changing all your code, just <strong>parameterize</strong> your document.</p>
 
 </article></slide><slide class=''><hgroup><h2>Exercise 4: Parameterizing Reports</h2></hgroup><article  id="exercise-4-parameterizing-reports">
 
@@ -260,9 +282,11 @@ output: html_document
 <li>&#8230;</li>
 </ul>
 
-<p>For example, <a href='ex1_full.html' title=''>here</a> is a slightly fancier version of the exercise we just completed. Instead of going into these details, let&#39;s illustrate how RMarkdown can be used to construct attractive deliverables. The <code>html_document</code> type can be used for this, but let&#39;s talk about&#8230;</p>
+<p>For example, <a href='ex1_fancier.html' title=''>here</a> is a slightly fancier version of the exercise we just completed.</p>
 
-</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>A Dashboard Example</h2></hgroup><article  id="a-dashboard-example">
+<p>Instead of going into these details, let&#39;s illustrate how RMarkdown can be used to construct attractive deliverables. The <code>html_document</code> type can be used for this, but let&#39;s talk about&#8230;</p>
+
+</article></slide><slide class='segue dark nobackground'><hgroup class = 'auto-fadein'><h2>Dashboards</h2></hgroup><article  id="dashboards">
 
 </article></slide><slide class=''><hgroup><h2><code>flexdashboard</code></h2></hgroup><article  id="flexdashboard">
 
@@ -310,7 +334,9 @@ output: html_document
 <ul>
 <li>RMarkdown <a href='http://rmarkdown.rstudio.com/index.html' title=''>website</a></li>
 <li>RMarkdown <a href='https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf' title=''>cheatsheet</a></li>
-<li><a href='http://rmarkdown.rstudio.com/flexdashboard/' title=''>Flexdashboard</a></li>
+<li><a href='http://rmarkdown.rstudio.com/flexdashboard/' title=''>Documentation</a> for <code>flexdashboard</code></li>
+<li>John Gruber&#39;s original Markdown <a href='https://daringfireball.net/projects/markdown/syntax' title=''>syntax specification</a></li>
+<li><a href='http://dillinger.io/' title=''>Dillinger</a>, a convenient online tool for practicing writing in Markdown (not that you need much practice)</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>What&#39;s going on behind the scenes?</h2></hgroup><article  id="whats-going-on-behind-the-scenes">
